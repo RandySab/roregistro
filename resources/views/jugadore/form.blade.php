@@ -76,7 +76,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('ESCUELA') }}
-            {{ Form::text('escuela', $jugadore->escuela, ['class' => 'form-control' . ($errors->has('escuela') ? ' is-invalid' : ''), 'placeholder' => 'Escuela']) }}
+            {{ Form::text('escuela', $jugadore->escuela, ['class' => 'form-control' . ($errors->has('escuela') ? ' is-invalid' : ''), 'placeholder' => 'Escriba la escuela en caso de estar cursando estudios...']) }}
             {!! $errors->first('escuela', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
@@ -86,18 +86,18 @@
         </div>
         <div class="form-group">
             {{ Form::label('PASATIEMPOS') }}
-            {{ Form::text('hoby', $jugadore->hoby, ['class' => 'form-control' . ($errors->has('hoby') ? ' is-invalid' : ''), 'placeholder' => 'Pasatiempos predilectos del jugador aparte del Voleibol...']) }}
+            {{ Form::textarea('hoby', $jugadore->hoby, ['class' => 'form-control' . ($errors->has('hoby') ? ' is-invalid' : ''), 'placeholder' => 'Pasatiempos predilectos del jugador aparte del Voleibol...']) }}
             {!! $errors->first('hoby', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-       <!--  <div class="form-group">
-            {{ Form::label('foto') }}
-            {{ Form::text('foto', $jugadore->foto, ['class' => 'form-control' . ($errors->has('foto') ? ' is-invalid' : ''), 'placeholder' => 'Foto']) }}
+        <div class="form-group">
+            <!-- {{ Form::label('foto') }} -->
+            {{ Form::hidden('foto', $jugadore->foto, ['class' => 'form-control' . ($errors->has('foto') ? ' is-invalid' : ''), 'placeholder' => 'Foto']) }}
             {!! $errors->first('foto', '<div class="invalid-feedback">:message</p>') !!}
-        </div> -->
+        </div>
 
         <div class="form-group">
             {{ Form::label('FICHA TECNICA') }}
-            {{ Form::text('ficha', $jugadore->ficha, ['class' => 'form-control' . ($errors->has('ficha') ? ' is-invalid' : ''), 'placeholder' => 'Antecedentes, formación, participaciones, logros del jugador en el deporte..']) }}
+            {{ Form::textarea('ficha', $jugadore->ficha, ['class' => 'form-control' . ($errors->has('ficha') ? ' is-invalid' : ''), 'placeholder' => 'Antecedentes, formación, participaciones, logros del jugador en el deporte..']) }}
             {!! $errors->first('ficha', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 

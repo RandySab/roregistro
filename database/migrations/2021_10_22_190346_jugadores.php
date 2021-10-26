@@ -32,10 +32,10 @@ class Jugadores extends Migration
             $table->string('ciudadres');
             $table->string('estudiante');
             $table->string('escuela');
-            $table->string('profesion');
-            $table->string('hoby');
-            $table->string('foto');
-            $table->string('ficha');
+            $table->string('profesion'->nullable);
+            $table->string('hoby')->nullable;
+            $table->string('foto')->nullable;
+            $table->string('ficha')->nullable;
 
             $table->timestamps();
 
