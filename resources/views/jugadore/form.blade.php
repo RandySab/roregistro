@@ -50,6 +50,17 @@
         </div>
 
         <div class="form-group">
+            {{ Form::label('ESTATURA') }}
+            {{ Form::text('estatura', $jugadore->estatura, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Captura tu estarura como 1.65']) }}
+            {!! $errors->first('telefono', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('NUMERO DE JUGADOR') }}
+            {{ Form::text('num', $jugadore->num, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Número que usa el jugador en su uniforme']) }}
+            {!! $errors->first('telefono', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+
+        <div class="form-group">
             {{ Form::label('TELEFONO') }}
             {{ Form::text('telefono', $jugadore->telefono, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Telefono']) }}
             {!! $errors->first('telefono', '<div class="invalid-feedback">:message</p>') !!}
