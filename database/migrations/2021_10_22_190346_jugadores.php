@@ -26,6 +26,8 @@ class Jugadores extends Migration
             $table->string('nick');
             $table->string('edad');
             $table->string('sexo');
+            $table->string('estatura')->nullable;
+            $table->string('num')->nullable;
             $table->string('telefono')->nullable;
             $table->string('email')->nullable;
             $table->string('ciudadnac');
